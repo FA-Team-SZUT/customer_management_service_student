@@ -82,7 +82,7 @@ __Aufgaben__:
     
 Nach dem zweiten Test ist der Code für die Instanziierung eines neuen CustomerNameValidator-Objekts dupliziert. Da wir für jeden Unit-Test eine Instanz benötigen, bietet es sich an diesen Code auszulagern. Führe ein entsprechendes Refactoring deiner Tests anhand des unten abgebildeten Code-Schnipsels aus der letzten Übung durch. Beachte: Die Annotation `@BeforeEach` bewirkt, dass die Methode `setUp()` vor jedem Test ausgeführt wird, jeder Test also eine neue Instanz erhält.
 
-```sh 
+```java 
 public class MaexchenTest {
     private Maexchen game;
 
@@ -144,6 +144,6 @@ assertThat(optionalCustomerEntity.get().getCreateDate()).isCloseTo(LocalDateTime
 
 ## Kapitel 4: Integration Tests
 
-__Aufgabe2__: 
+__Aufgaben__: 
 1. Öffne den Integrationstest [HappyPathIT](src/test/java/de/szut/customer/HappyPathIT.java). Mach dir die Funktionsweise des Tests klar. Führe ihn aus.
 2. Der Integrationstest zum Testen des Get-Endpunktes fehlt. Schreibe diesen Test. Beachte dabei: a) einen Customer-Entity über das JpaRepository in der Datenbank zu speichern, b) den Get-Endpunkt aufzurufen und c) den Statuscode sowie die Attribute zu verifizieren. 
